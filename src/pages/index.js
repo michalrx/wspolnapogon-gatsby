@@ -15,6 +15,10 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
+    <br />
+    <Link to="/pilka-nozna/tabela/">Tabela - Pogoń (przykładowa strona)</Link>
+    <br />
+    <Link to="/2018/10/king-przegral-w-warszawie-legia-obronila-swoj-parkiet/">King Szczecin - przykładowy artykuł</Link>
   </Layout>
 )
 
