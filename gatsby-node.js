@@ -1,6 +1,8 @@
 const path = require(`path`)
 const { slash } = require(`gatsby-core-utils`)
 
+const { createRemoteFileNode } = require("gatsby-source-filesystem")
+
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
 // access to any information necessary to programmatically
