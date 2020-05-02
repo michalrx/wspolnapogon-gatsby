@@ -14,9 +14,7 @@ const Post = ({ data }) => {
         <Layout>
             <SEO title={post.title} />
             <h1>{post.title}</h1>
-            {/* <img src={post.featured_media.localFile.url} alt={post.title} /> */}
             {featuredImg &&
-                // <Img resolutions={resolutions}/>
                 <Img fluid={featuredImg} />
             }
             <div dangerouslySetInnerHTML={{__html: post.content}} />

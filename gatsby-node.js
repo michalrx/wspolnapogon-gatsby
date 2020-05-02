@@ -1,7 +1,6 @@
 const path = require(`path`)
+//const fs = require("fs-extra")
 const { slash } = require(`gatsby-core-utils`)
-
-const { createRemoteFileNode } = require("gatsby-source-filesystem")
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
@@ -88,3 +87,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
+
+// exports.onPostBuild = () => {
+//     fs.copySync(path.join(__dirname, "public"), path.join(__dirname, "../public-gatsby-test"),{ overwrite: true })
+// }
