@@ -19,6 +19,8 @@ const IndexPage = () => (
     <Link to="/pilka-nozna/tabela/">Tabela - Pogoń (przykładowa strona)</Link>
     <br />
     <Link to="/2018/10/king-przegral-w-warszawie-legia-obronila-swoj-parkiet/">King Szczecin - przykładowy artykuł</Link>
+    <br />
+    <Link to="/posts/">Wszystkie artykuly</Link>
   </Layout>
 )
 

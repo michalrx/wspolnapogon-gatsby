@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+import { navigate } from "@reach/router"  
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
@@ -10,6 +12,11 @@ const Post = ({ data }) => {
     const post = data.wordpressPost;
     const featuredImg = (post.featured_media && post.featured_media.localFile) ? post.featured_media.localFile.childImageSharp.fluid : null
 
+    const handleGoBack = (e) => {
+        e.preventDefault();
+        navigate(-1)
+    }
+
     return (
         <Layout>
             <SEO title={post.title} />
@@ -18,6 +25,7 @@ const Post = ({ data }) => {
                 <Img fluid={featuredImg} />
             }
             <div dangerouslySetInnerHTML={{__html: post.content}} />
+            <Link to="/" onClick={handleGoBack}>Wróć do poprzedniej strony</Link>
         </Layout>
     )
 }
@@ -37,7 +45,7 @@ export const postQuery = graphql`
       featured_media {
           localFile {
             childImageSharp{
-                fluid(maxWidth: 1000){
+                fluid(maxWidth: 1920){
                     ...GatsbyImageSharpFluid
                 }
             }
