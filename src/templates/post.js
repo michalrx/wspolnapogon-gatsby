@@ -8,16 +8,16 @@ import SEO from "../components/seo"
 
 const Post = ({ data }) => {
     const post = data.wordpressPost;
-    const fluid = post.featured_media.localFile.childImageSharp.fluid
+    const featuredImg = (post.featured_media && post.featured_media.localFile) ? post.featured_media.localFile.childImageSharp.fluid : null
 
     return (
         <Layout>
             <SEO title={post.title} />
             <h1>{post.title}</h1>
             {/* <img src={post.featured_media.localFile.url} alt={post.title} /> */}
-            {fluid &&
+            {featuredImg &&
                 // <Img resolutions={resolutions}/>
-                <Img fluid={data.wordpressPost.featured_media.localFile.childImageSharp.fluid} />
+                <Img fluid={featuredImg} />
             }
             <div dangerouslySetInnerHTML={{__html: post.content}} />
         </Layout>
