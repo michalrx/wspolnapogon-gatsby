@@ -26,7 +26,7 @@ const PostsPage = ({ data, pageContext }) => {
             {group.map(({ node }) => (
                 <div key={node.path} className={"post"} style={{ marginBottom: 50 }}>
 
-                    {node.featured_media && node.featured_media.localFile.childImageSharp.fluid &&
+                    {node.featured_media && node.featured_media.localFile &&
                         <div>
                             <Img fluid={node.featured_media.localFile.childImageSharp.fluid} />
                         </div>
