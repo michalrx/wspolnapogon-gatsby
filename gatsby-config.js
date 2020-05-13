@@ -45,8 +45,8 @@ module.exports = {
           "**/media",
           "**/categories",
           "**/tags",
-          "**/taxonomies",
-          "**/users",
+          //"**/taxonomies",
+          //"**/users",
           //"/sportspress/**",
         ],
         excludedRoutes: [
@@ -54,6 +54,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-background-image`,
     `gatsby-plugin-netlify-cache`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
