@@ -37,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage: createPage,
     pageTemplate: "src/templates/posts.js",
     pageLength: 15,
-    pathPrefix: "posts"
+    pathPrefix: "aktualnosci"
   })
 
   posts.forEach(edge => {

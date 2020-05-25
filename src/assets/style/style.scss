@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+  // height: 214px;
+  // height: auto;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  background: #001c34;
+  // background: #860d03;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    padding: 10px 0;
+    flex: auto;
+    margin-left: -15px;
+  }
+
+  .menu {
+    color: #fff;
+    margin-right: -15px;
+    
+    > ul {
+      display: flex;
+      margin-bottom: 0;
+      list-style: none;
+
+      > li {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.homepage {
+  &--post-large {
+    overflow: hidden;
+
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    a .gatsby-image-wrapper img {
+      transition: .3s !important;
+    }
+
+    a:hover .gatsby-image-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .category {
+      width: auto;
+      text-align: left;
+      font-size: 0.9em;
+      letter-spacing: -1px;
+      padding: 5px 10px;
+      color: #fff;
+      font-family: 'Inconsolata', monospace;
+      text-transform: uppercase;
+      background: #001c34;
+    }
+  
+    .title {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px;
+      color: #fff;
+      transition: transform .3s;
+      background: linear-gradient(0deg, black, transparent);
+
+      > h1 {
+        margin-block-start: 0;
+      }
+    }
+  }
+
+  &--post-small {
+    .post {
+      display: flex;
+      align-items: center;
+
+      > a {
+        display: block;
+        width: 40%;
+      }
+    }
+
+    a {
+      color: #000;
+    }
+
+    .gatsby-image-wrapper {
+      width: 100%;
+    }
+
+    .title {
+      position: relative;
+      width: auto;
+    }
+
+    .category {
+      font-size: 0.9em;
+      letter-spacing: -1px;
+      color: #333;
+      font-family: 'Inconsolata', monospace;
+      text-transform: uppercase;
+    }
+
+    .content {
+      width: 60%;
+    }
+  }
+}

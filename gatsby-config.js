@@ -55,6 +55,7 @@ module.exports = {
       },
     },
     `gatsby-background-image`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cache`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

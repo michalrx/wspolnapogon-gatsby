@@ -2,22 +2,14 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import BackgroundImage from 'gatsby-background-image'
 import Img from 'gatsby-image'
 
 const Header = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
     query {
-      backgroundHeader: file(relativePath: { eq: "head-bg-FHD.jpg" }) {
+      logoImage: file(relativePath: { eq: "new-logo-sm.png" }) {
         childImageSharp {
-          fixed(quality: 100, width: 1920, height: 214) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-      logoImage: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fluid(quality: 100, maxWidth: 442, maxHeight: 200) {
+          fluid(quality: 100, maxWidth: 200) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -26,13 +18,20 @@ const Header = ({ siteTitle }) => {
   `)
   return (
   <header>
-    <BackgroundImage fixed={data.backgroundHeader.childImageSharp.fixed}>
-      <div className="container logo">
-        <Link to="/" style={{ width: '100%' }}>
-          <Img fluid={data.logoImage.childImageSharp.fluid} alt="test" style={{ maxWidth: 442, maxHeight: 200, marginLeft: 'auto', marginRight: 'auto' }} />
+    <div className="container">
+      <div className="logo">
+        <Link to="/">
+          <Img fluid={data.logoImage.childImageSharp.fluid} alt="test" style={{ maxWidth: 200}} />
         </Link>
       </div>
-    </BackgroundImage>
+      <div className="menu">
+        <ul>
+          <li>homepage</li>
+          <li>articles</li>
+          <li>contact</li>
+        </ul>
+      </div>
+    </div>
   </header>
 )
 }

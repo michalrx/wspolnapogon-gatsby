@@ -23,25 +23,27 @@ const PostsPage = ({ data, pageContext }) => {
             <SEO title="All articles" />
             <h4>{pageCount} Pages</h4>
 
-            {group.map(({ node }) => (
-                <div key={node.path} className={"post"} style={{ marginBottom: 50 }}>
+            <div className="all-posts row">
+                {group.map(({ node }) => (
+                    <div key={node.path} className={"col-md-4"} style={{ marginBottom: 50 }}>
 
-                    {node.featured_media && node.featured_media.localFile &&
-                        <div>
-                            <Img fluid={node.featured_media.localFile.childImageSharp.fluid} />
-                        </div>
-                    }
+                        {node.featured_media && node.featured_media.localFile &&
+                            <Link to={node.path}>
+                                <Img fluid={node.featured_media.localFile.childImageSharp.fluid} />
+                            </Link>
+                        }
 
 
-                    <Link to={node.path}>
-                        <h3>{node.title}</h3>
-                    </Link>
+                        <Link to={node.path}>
+                            <h3>{node.title}</h3>
+                        </Link>
 
-                    <div className={"post-content"} dangerouslySetInnerHTML={{__html: node.excerpt}} />
+                        <div className={"post-content"} dangerouslySetInnerHTML={{__html: node.excerpt}} />
 
-                    {node.date}
-                </div>
-            ))}
+                        {node.date}
+                    </div>
+                ))}
+            </div>
             <div className="previousLink">
                 <NavLink test={first} url={"/posts/" + previousUrl} text="Go to Previous Page" />
             </div>

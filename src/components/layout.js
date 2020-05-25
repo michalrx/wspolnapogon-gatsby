@@ -9,8 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./Header"
+import LatestPost from "./latestPost"
+import '../assets/bootstrap/bootstrap-reboot.css'
+import '../assets/bootstrap/bootstrap-grid.css'
+import "../assets/style/style.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,12 +29,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <LatestPost />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+        className=""
       >
         <main>{children}</main>
         <footer>

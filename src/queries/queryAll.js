@@ -24,7 +24,7 @@ module.exports = `
                     featured_media{
                         localFile{
                             childImageSharp{
-                                fluid(maxWidth: 1920){
+                                fluid(maxWidth: 800, maxHeight: 500){
                                     src
                                     srcSet
                                     aspectRatio
