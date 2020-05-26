@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => {
       logoImage: file(relativePath: { eq: "new-logo-sm.png" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 200) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid
           }
         }
       }

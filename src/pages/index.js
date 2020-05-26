@@ -50,7 +50,7 @@ const IndexPage = () => {
       }
     }
   `)
-  console.log(data.allWordpressPost.edges);
+  //console.log(data.allWordpressPost.edges);
   return (
   <Layout>
     <SEO title="Home" />

@@ -10,7 +10,7 @@ const LatestPost = () => {
         }
       }
     `)
-    console.log(data);
+    //console.log(data);
   return (
     <div className="mb-3" style={{
         background: '#860d03',
