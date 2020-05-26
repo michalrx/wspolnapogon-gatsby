@@ -5,13 +5,9 @@ body {
 }
 
 header {
-  // height: 214px;
-  // height: auto;
   display: flex;
-  // justify-content: center;
   align-items: center;
   background: #001c34;
-  // background: #860d03;
 
   > div {
     display: flex;
@@ -36,6 +32,21 @@ header {
       > li {
         margin-right: 30px;
       }
+    }
+  }
+}
+
+.latest-post {
+  background: #860d03;
+
+  .latest-post--wrapper {
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #fff;
+
+    a {
+      color: #fff;
+      text-decoration: none;
     }
   }
 }

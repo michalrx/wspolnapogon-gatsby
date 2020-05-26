@@ -111,7 +111,7 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-    <div className="container-fluid mt-3" style={{background: '#333'}}>
+    <div className="container-fluid mt-3 p-5" style={{background: '#333'}}>
       test
     </div>
     <h1>Siema to jest test!</h1>
